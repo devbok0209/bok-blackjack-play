@@ -2,18 +2,18 @@ package nextstep.optional;
 
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 
 
-public class ExpressionTest {
+ class ExpressionTest {
     @Test
-    public void of() {
-        assertThat(Expression.PLUS == Expression.of("+")).isTrue();
+    void of() throws IllegalAccessException {
+        assertTrue(Expression.PLUS == Expression.of("+"));
     }
 
     @Test
-    public void notValidExpression() {
+    void notValidExpression() {
         assertThatIllegalArgumentException()
                 .isThrownBy(() -> {
                     Expression.of("&");
