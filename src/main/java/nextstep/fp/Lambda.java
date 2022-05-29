@@ -1,6 +1,8 @@
 package nextstep.fp;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 public class Lambda {
     public static void printAllOld(List<Integer> numbers) {
@@ -18,18 +20,23 @@ public class Lambda {
     }
 
     public static void runThread() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("Hello from thread");
-            }
-        }).start();
+        new Thread(() -> System.out.println("Hello from thread")).start();
     }
 
     public static int sumAll(List<Integer> numbers) {
         int total = 0;
         for (int number : numbers) {
             total += number;
+        }
+        return total;
+    }
+
+    public static int sumUsingLamda(List<Integer> numbers, Conditional conditional) {
+        int total = 0;
+        for (int number : numbers) {
+            if (conditional.test(number)) {
+                total += number;
+            }
         }
         return total;
     }

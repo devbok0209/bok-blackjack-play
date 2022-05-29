@@ -25,5 +25,6 @@ git checkout -b 브랜치이름
 ex) git checkout -b apply-feedback
 ```
 
-
+# TODO LIST
 * ~~MoveStrategy 익명 클래스 -> 람다 전환.~~
+* ~~sumAll, sumAllEven, sumAllOverThree method 중복 제거~~
