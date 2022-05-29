@@ -28,3 +28,8 @@ ex) git checkout -b apply-feedback
 # TODO LIST
 * ~~MoveStrategy 익명 클래스 -> 람다 전환.~~
 * ~~sumAll, sumAllEven, sumAllOverThree method 중복 제거~~
+* 단어 길이 12자 초과
+* 가장 긴 순서 대로 정렬
+* 중복 허용 안함
+* 모든 단어 소문자
+* String 
